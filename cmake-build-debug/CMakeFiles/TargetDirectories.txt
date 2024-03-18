@@ -1,0 +1,3 @@
+D:/2024MyProject/majiang/cmake-build-debug/CMakeFiles/majiang.dir
+D:/2024MyProject/majiang/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/2024MyProject/majiang/cmake-build-debug/CMakeFiles/rebuild_cache.dir
