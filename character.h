@@ -7,19 +7,25 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
-class userCharacter{
-public:
+#include "block.h"
 
-private :
-    // the name of the user
+using namespace std;
+class Character{
+public:
+    Character(const string &name, const int base)
+    {
+        this -> name = name;
+        this -> base = base;
+        cout << "Character " << name << " Your Base Score is: " << base << endl;
+    };
+
+
+private:
     string name;
-    // the health point of the user
-    int healthPoint;
-    // the attack point of the user
-    int attackPoint;
-    // the defense point of the user
-    int defensePoint;
+    int base;
+    vector<block> hand;
 };
+
+
 
 #endif //MAJIANG_CHARACTER_H

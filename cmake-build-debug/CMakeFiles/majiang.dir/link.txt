@@ -1,0 +1,3 @@
+C:\Users\shaon\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\majiang.dir/objects.a
+C:\Users\shaon\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\majiang.dir/objects.a @CMakeFiles\majiang.dir\objects1.rsp
+C:\Users\shaon\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\majiang.dir/objects.a -Wl,--no-whole-archive -o majiang.exe -Wl,--out-implib,libmajiang.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\majiang.dir\linkLibs.rsp
