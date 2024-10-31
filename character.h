@@ -18,12 +18,30 @@ public:
         this -> base = base;
         cout << "Character " << name << " Your Base Score is: " << base << endl;
     };
+    void initializeHand(vector<block> &blocks)
+    {
+        for(int i = 0; i < 13; i++)
+        {
+            int blockID = drawBlock(blocks);
+            block newBlock(blockID, 1);
+            hand.push_back(newBlock);
+        }
+    }
+    void userDraw(vector<block> &blocks)
+    {
+        currentBlock = drawBlock(blocks);
+    }
+    int getCurrentBlock() const
+    {
+        return currentBlock;
+    }
 
 
 private:
     string name;
     int base;
     vector<block> hand;
+    int currentBlock = 0;
 };
 
 
