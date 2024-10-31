@@ -25,6 +25,10 @@ public:
     {
         amount--;
     }
+    void addBlock()
+    {
+        amount++;
+    }
     int getBlockID() const
     {
         return blockID;

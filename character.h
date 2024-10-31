@@ -29,11 +29,42 @@ public:
     }
     void userDraw(vector<block> &blocks)
     {
-        currentBlock = drawBlock(blocks);
+        int currentBlock = drawBlock(blocks);
+        for(auto hand : hand)
+        {
+            if(hand.getBlockID() == currentBlock)
+            {
+                hand.addBlock();
+                return;
+            }
+        }
+        block newBlock(currentBlock, 1);
+        hand.push_back(newBlock);
     }
-    int getCurrentBlock() const
+    void userDiscard()
     {
-        return currentBlock;
+        cout << "Which block do you want to discard?" << endl;
+        printHand();
+        int discardBlock;
+        cin >> discardBlock;
+        for(auto hand : hand)
+        {
+            if(hand.getBlockID() == discardBlock)
+            {
+                hand.removeBlock();
+                return;
+            }
+        }
+    }
+
+    void printHand()
+    {
+        cout << "Your Hand: ";
+        for(auto block : hand)
+        {
+            cout << blockName[block.getBlockID()/9] << " " << block.getBlockID()%9+1 << " ";
+        }
+        cout << endl;
     }
 
 
@@ -41,7 +72,6 @@ private:
     string name;
     int base;
     vector<block> hand;
-    int currentBlock = 0;
 };
 
 
